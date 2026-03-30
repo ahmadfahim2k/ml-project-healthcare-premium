@@ -43,7 +43,7 @@ with left_col:
 
 with divider_col:
     st.markdown(
-        "<div style='border-left: 2px solid #e0e0e0; height: 100%; min-height: 400px;'></div>",
+        "<div style='border-left: 2px solid #e0e0e0; height: 100%; min-height: 600px;'></div>",
         unsafe_allow_html=True
     )
 
