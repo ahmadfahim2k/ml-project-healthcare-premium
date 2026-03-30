@@ -7,6 +7,11 @@ st.set_page_config(layout="wide")
 
 st.markdown("""
 <style>
+/* Remove default padding so app fits in viewport */
+.block-container {
+    padding-top: 1rem !important;
+    padding-bottom: 0 !important;
+}
 /* Keep columns top-aligned so right panel doesn't stretch */
 div[data-testid="stHorizontalBlock"] {
     align-items: flex-start;
@@ -27,7 +32,7 @@ with left_col:
     st.subheader("Enter your details:")
     user_input = {}
 
-    with st.container(height=750, border=False):
+    with st.container(height=650, border=False):
         for i in range(0, len(FIELD_ORDER), 2):
             cols = st.columns(2)
             for col_index, field in enumerate(FIELD_ORDER[i:i+2]):
