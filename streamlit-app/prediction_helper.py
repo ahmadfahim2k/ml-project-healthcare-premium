@@ -2,11 +2,13 @@ import pandas as pd
 from joblib import load
 import os
 
+BASE_DIR = os.path.dirname(__file__)
+
 MODEL_PATH = {
-        'model_rest': 'artifacts/model_rest.joblib',
-        'model_young': 'artifacts/model_young.joblib',
-        'scaler_rest': 'artifacts/scaler_rest.joblib',
-        'scaler_young': 'artifacts/scaler_young.joblib',
+        'model_rest': os.path.join(BASE_DIR, 'artifacts/model_rest.joblib'),
+        'model_young': os.path.join(BASE_DIR, 'artifacts/model_young.joblib'),
+        'scaler_rest': os.path.join(BASE_DIR, 'artifacts/scaler_rest.joblib'),
+        'scaler_young': os.path.join(BASE_DIR, 'artifacts/scaler_young.joblib'),
     }
 
 # Load models and scalers
